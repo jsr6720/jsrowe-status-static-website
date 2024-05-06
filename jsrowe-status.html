@@ -30,7 +30,7 @@
             font-weight: bold;
         }
 
-        .happy-face {
+        .emojii {
             font-size: 4em;
         }
 
@@ -79,14 +79,14 @@
 <body>
     <div class="container">
         <h1>Is James Alive?</h1>
-        <p class="alive">Yes, he is! 😃</p>
-        <div class="happy-face">😊</div>
+        <p class="alive">No, he is not... 😞</p>
+        <div class="emojii">💀</div>
 
-        <button class="meme-button" onclick="generateGiphy()">Generate a funny meme for James</button>
+        <button class="meme-button" onclick="generateGiphy()">Generate a sad meme for James' friend Tony</button>
 
         <div class="meme-preview" id="meme-preview"></div>
         <div class="links" id="send-link">
-            <a id="email-link" href="#">Send James the meme</a>
+            <a id="email-link" href="#">Send Tony the meme</a>
         </div>
 
         <div class="powered-by-giphy">
@@ -101,7 +101,7 @@
     <script>
         function generateGiphy() {
             const giphyApiKey = 'pOJSXfC6lIikbXPV2XrLgawGki830uef'; // beta key - rate limited
-            const giphyApiUrl = `https://api.giphy.com/v1/gifs/random?tag=funny&api_key=${giphyApiKey}`;
+            const giphyApiUrl = `https://api.giphy.com/v1/gifs/random?tag=sad&api_key=${giphyApiKey}`;
 
             fetch(giphyApiUrl)
                 .then(response => response.json())
@@ -112,7 +112,7 @@
 
                     document.getElementById('send-link').style.display = 'block';
                     document.getElementById('meme-preview').innerHTML = `<img src="${previewGif}" alt="Random Meme Preview">`;
-                    document.getElementById('email-link').href = `mailto:5853136207@vzwpix.com?subject=A%20Funny%20Meme&body=${emailBody}`;
+                    document.getElementById('email-link').href = `mailto:Knopp.anthony@gmail.com?subject=Sorry%20bro&body=${emailBody}`;
                 })
                 .catch(error => {
                     document.getElementById('meme-preview').innerHTML = '<h4>Giphy error</h4>';

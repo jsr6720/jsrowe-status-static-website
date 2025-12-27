@@ -1,0 +1,40 @@
+name: Deploy site to S3
+
+on:
+  push:
+    branches:
+      - main
+    paths-ignore:
+      - data/feeds.json
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  id-token: write
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_GHA_ROLE_TO_ASSUME }}
+          aws-region: us-east-1
+      
+      - name: Sync site to S3
+        run: |
+          aws s3 sync ./ s3://${{ secrets.S3_BUCKET }}/ \
+            --delete \
+            --exclude ".git/*" \
+            --exclude ".github/*" \
+            --exclude "node_modules/*" \
+            --exclude "scripts/*" \
+            --exclude "package.json" \
+            --exclude "package-lock.json" \
+            --exclude "README.md" \
+            --exclude "LICENSE"

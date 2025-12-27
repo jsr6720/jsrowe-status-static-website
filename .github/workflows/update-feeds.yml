@@ -26,7 +26,24 @@ jobs:
       - name: Update feeds
         run: npm run update-feeds
 
+      - name: Check for feed updates
+        id: feeds_changed
+        run: |
+          if git status --porcelain | grep -q "data/feeds.json"; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Configure AWS credentials
+        if: steps.feeds_changed.outputs.changed == 'true'
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: ${{ secrets.AWS_GHA_ROLE_TO_ASSUME }}
+          aws-region: us-east-1
+
       - name: Commit changes
+        if: steps.feeds_changed.outputs.changed == 'true'
         run: |
           if git status --porcelain | grep -q "data/feeds.json"; then
             git config user.name "github-actions[bot]"
@@ -37,3 +54,8 @@ jobs:
           else
             echo "No feed updates to commit."
           fi
+
+      - name: Upload feeds.json to S3
+        if: steps.feeds_changed.outputs.changed == 'true'
+        run: |
+          aws s3 cp data/feeds.json s3://${{ secrets.S3_BUCKET }}/data/feeds.json --cache-control "max-age=300"

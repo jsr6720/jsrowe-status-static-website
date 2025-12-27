@@ -6,6 +6,7 @@ on:
       - main
     paths-ignore:
       - data/feeds.json
+      - .github/**
   workflow_dispatch:
 
 permissions:
@@ -32,6 +33,7 @@ jobs:
             --delete \
             --exclude ".git/*" \
             --exclude ".github/*" \
+            --exclude "*.yml" \
             --exclude "node_modules/*" \
             --exclude "scripts/*" \
             --exclude "package.json" \

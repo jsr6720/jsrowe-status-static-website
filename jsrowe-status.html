@@ -14,52 +14,60 @@
     <link rel="icon" href="./favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav">
-        </nav>
-    </header>
     <main>
-        <div class="container">
-            <div class="heartbeat-title">
-                <div class="left">
-                    <p><img src="heart.png"></p>
+        <div class="page">
+            <header class="title">
+                <div class="title-row">
+                    <h1>James Rowe Status</h1>
+                    <img class="header-heart" src="heart.png" alt="Heart">
                 </div>
-                <div class="right">
-                    <h1>Is James Alive?</h1>
-                    <p>Yes, he is alive! <a href="https://www.lls.org">LLS 🎗️</a></p>
-                </div>
-            </div>
+                <p>Proof of life. 🎗️ You only get one life. <a href="https://www.goodreads.com/book/show/1185555.1_000_Marbles">Live it intentionally.</a></p>
+            </header>
 
-            <div class="status-bars">
-                <p>Life</p>
-                <div class="status-bar">
-                    <div class="fill"></div>
-                </div>
-                <!-- todo integrate with my <p>Hearing Aids</p> -->
-                <!-- show my last played song on <p>Apple Music</p> -->
-                <p> <a href="https://www.strava.com/athletes/68595893">Strava</a></p>
-            </div>
-
-            <div class="projects">
-                <h1>Read something I wrote</h1>
-                <p><a href="https://jsrowe.com">James' Thoughts</a></p>
-                <p><a href="https://www.linkedin.com/in/jsr6720">Find me on LinkedIn</p>
-                <p><a href="https://github.com/jsr6720/">My public repositories on GitHub</a></p>
-
-                <h1>Shipped Projects</h1>
-                <p>
-                    <a href="https://roweinnovations.com/">Rowe Innovations, LLC</a> - 
-                    <i><a href="https://www.amazon.com/Primer-Business-Leaders-Demystifying-Generative-ebook/dp/B0DKQSV5H4/">AI Primer For Business Leaders: Demystifying Generative AI</a></i>
-                </p>
-
-                <h1>Upcoming projects</h1>
-                <p>Wiglaf Software&trade; - Slopes</p>
-                <p>Rowe Innovations, LLC - AML memoir</p>
-            </div>
+            <section class="grid">
+                <article class="cell">
+                    <h2>Health</h2>
+                    <p class="value health-green">Alive. <span id="alive-seconds">0 seconds and counting</span></p>
+                    <div class="status-bar">
+                        <div id="health-fill" class="status-fill"></div>
+                    </div>
+                    <p id="health-meta" class="meta"></p>
+                    <p id="health-countdown" class="meta"></p>
+                </article>
+                <article class="cell">
+                    <h2>Coding</h2>
+                    <p id="github-activity" class="value">Checking GitHub...</p>
+                    <p id="github-time" class="meta"></p>
+                    <p class="meta"><a href="https://github.com/jsr6720">Profile</a> · <a href="https://github.com/jsr6720.atom">Atom feed</a></p>
+                </article>
+                <article class="cell">
+                    <h2>jsrowe.com</h2>
+                    <p id="jsrowe-feed" class="value">Checking feed...</p>
+                    <p id="jsrowe-time" class="meta"></p>
+                    <p class="meta"><a href="https://jsrowe.com/feed.xml">Feed</a></p>
+                </article>
+                <article class="cell">
+                    <h2>noted.jsrowe.com</h2>
+                    <p id="noted-feed" class="value">Checking feed...</p>
+                    <p id="noted-time" class="meta"></p>
+                    <p class="meta"><a href="https://noted.jsrowe.com/feed.xml">Feed</a></p>
+                </article>
+                <article class="cell">
+                    <h2>Rowe Innovations</h2>
+                    <p class="value"><a href="https://roweinnovations.com/">roweinnovations.com</a></p>
+                    <p class="meta">Shipped projects + experiments.</p>
+                </article>
+                <article class="cell">
+                    <h2>LinkedIn</h2>
+                    <p class="value"><a href="https://www.linkedin.com/in/jsr6720">linkedin.com/in/jsr6720</a></p>
+                    <p class="meta">Infrequent updates.</p>
+                </article>
+            </section>
         </div>
     </main>
     <footer>
-        <h6>Built by Wiglaf Software&trade; Last updated: 2024-11-17 22:08:16 -0400</h6>
+        <p>Built by Wiglaf Software&trade;. <a href="https://github.com/jsr6720/jsrowe-status-static-website#readme">About this page</a>. Last updated: <span id="last-updated">loading...</span></p>
     </footer>
+    <script src="./app.js"></script>
 </body>
 </html>

@@ -1,0 +1,11 @@
+{
+  "name": "jsrowe-status-static-website",
+  "private": true,
+  "type": "commonjs",
+  "scripts": {
+    "update-feeds": "node scripts/update-feeds.js"
+  },
+  "dependencies": {
+    "fast-xml-parser": "4.4.1"
+  }
+}

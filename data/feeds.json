@@ -1,20 +1,20 @@
 {
-  "generatedAt": "2026-01-26T19:19:47.591Z",
+  "generatedAt": "2026-02-09T04:23:12.239Z",
   "github": {
     "text": "pushed code to",
-    "link": "https://github.com/jsr6720/jsr6720.github.io",
-    "date": "2026-01-22T02:54:42Z"
+    "link": "https://github.com/jsr6720/duly-noted-jsrowe",
+    "date": "2026-02-09T04:20:51Z"
   },
   "feeds": {
     "jsrowe": {
-      "title": "2025 AI Wrapped: A Year in Review",
-      "link": "https://www.jsrowe.com/ai-wrapped-series/",
-      "date": "2026-01-21T12:00:00+00:00"
+      "title": "Why AI Demands New Engineering Ratios",
+      "link": "https://www.jsrowe.com/ai-team-ratios/",
+      "date": "2026-02-04T02:46:48+00:00"
     },
     "noted": {
-      "title": "offline mode for games",
-      "link": "https://noted.jsrowe.com/offline-mode-for-games/",
-      "date": "Mon, 05 Jan 2026 02:30:04 +0000"
+      "title": "ben Affleck on AI",
+      "link": "https://noted.jsrowe.com/ben-affleck-on-ai/",
+      "date": "Mon, 09 Feb 2026 04:12:48 +0000"
     }
   }
 }

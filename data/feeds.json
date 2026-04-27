@@ -1,11 +1,15 @@
 {
-  "generatedAt": "2026-04-20T19:25:20.401Z",
-  "github": null,
+  "generatedAt": "2026-04-27T19:31:44.535Z",
+  "github": {
+    "text": "pushed code to",
+    "link": "https://github.com/jsr6720/jsr6720.github.io",
+    "date": "2026-04-25T21:25:10Z"
+  },
   "feeds": {
     "jsrowe": {
-      "title": "The Ownership Cost of AI Clones",
-      "link": "https://www.jsrowe.com/ownership-costs-of-ai-clones/",
-      "date": "2026-03-01T19:25:33+00:00"
+      "title": "Why AI Won’t Break Brooks’s Law",
+      "link": "https://www.jsrowe.com/brooks-law/",
+      "date": "2026-04-25T20:09:51+00:00"
     },
     "noted": {
       "title": "ai and hucksters",

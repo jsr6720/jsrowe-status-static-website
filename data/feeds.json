@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-07-27T19:30:17.178Z",
-  "github": null,
+  "generatedAt": "2026-08-03T19:30:59.841Z",
+  "github": {
+    "text": "starred",
+    "link": "https://github.com/yc-software/qm",
+    "date": "2026-07-31T21:44:08Z"
+  },
   "feeds": {
     "jsrowe": {
       "title": "Why AI Won’t Break Brooks’s Law",

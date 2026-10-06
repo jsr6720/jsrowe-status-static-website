@@ -1,6 +1,10 @@
 {
-  "generatedAt": "2026-09-28T23:36:38.112Z",
-  "github": null,
+  "generatedAt": "2026-10-06T00:31:52.966Z",
+  "github": {
+    "text": "created something in",
+    "link": "https://github.com/jsr6720/offsiteiq",
+    "date": "2026-10-01T18:42:10Z"
+  },
   "feeds": {
     "jsrowe": {
       "title": "Why AI Won’t Break Brooks’s Law",
